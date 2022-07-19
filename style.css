@@ -7,19 +7,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   background-color: #ffc800;
 }
-header {
+/* header {
   height: 10vh;
-}
+} */
 main {
+  margin-top: 10vh;
   background-color: white;
-  border-radius: 20px;
-  padding: 10px 0px 30px 0px;
+  border-radius: 2rem;
+  padding: 1rem 0rem 2rem 0rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
+  height: 25rem;
+  gap: 1rem;
 }
 h1,
 h3 {
@@ -34,14 +38,18 @@ h3 {
   font-size: 1rem;
 }
 
-section {
+div {
   width: 100%;
   text-align: center;
 }
+.name {
+  margin-top: 2rem;
+}
 .contact {
   display: flex;
-  justify-content: space-around;
-  padding: 2rem 15%;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
 }
 
 i {
@@ -50,25 +58,59 @@ i {
 }
 a {
   text-decoration: none;
-  color: #1ea896;
+  cursor: pointer;
+}
+.contact_link {
+  color: black;
   font-size: 1rem;
 }
-a:hover {
-  color: #ffc800;
+.contact_link:hover {
+  transform: scale(1.5);
+  transition: transform 500ms;
+}
+.project__link {
+  padding: 1.5rem 1rem;
+}
+.project__link:hover {
+  transform: scale(1.5);
+  transition: transform 500ms;
+}
+.my_projects {
+  color: white;
+  background-color: #1ea896;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
 }
 
 footer {
+  width: 100%;
+  color: white;
   margin-top: 5vh;
   font-size: 0.5rem;
   text-align: right;
   height: 5vh;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.2rem;
 }
 @media (min-width: 450px) {
   main {
-    padding: 15px 0px 30px 0px;
-    margin: 0px 5%;
+    width: 80%;
   }
-  .contact {
-    padding: 2rem 25%;
+}
+@media (min-width: 650px) {
+  main {
+    width: 60%;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    width: 40%;
+  }
+}
+@media (min-width: 1700px) {
+  main {
+    width: 25%;
   }
 }
