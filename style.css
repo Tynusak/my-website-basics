@@ -5,26 +5,51 @@
 
 body {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffc800;
-}
-/* header {
-  height: 10vh;
-} */
-main {
-  margin-top: 10vh;
-  background-color: white;
-  border-radius: 2rem;
-  padding: 1rem 0rem 2rem 0rem;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
-  height: 25rem;
+  background-color: #1ea896;
+}
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
+
+.nav__link {
+  padding: 0.7rem;
+}
+.nav__link:hover {
+  color: white;
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+
+.nav__link--text {
+  color: #ffc800;
+  background-color: #1ea896;
+  border: 1px solid #1ea896;
+}
+
+/* Main content - basics  */
+main {
+  background-color: white;
+  border-radius: 2rem;
+}
+div {
+  width: 100%;
+  text-align: center;
+}
+
+/* Text styles and basic link styles */
 h1,
 h3 {
   color: #1ea896;
@@ -37,14 +62,15 @@ h1 {
 h3 {
   font-size: 1rem;
 }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
 
-div {
-  width: 100%;
-  text-align: center;
-}
-.name {
-  margin-top: 2rem;
-}
+/* Images styles */
+
+/* Styles for contact links */
+
 .contact {
   display: flex;
   justify-content: center;
@@ -52,22 +78,40 @@ div {
   padding: 1rem;
 }
 
-i {
-  color: black;
-  font-size: 2rem;
-}
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-.contact_link {
-  color: black;
-  font-size: 1rem;
-}
 .contact_link:hover {
   transform: scale(1.5);
   transition: transform 500ms;
 }
+.fa-regular,
+.fa-brands {
+  color: black;
+  font-size: 2rem;
+}
+/* BEM classes */
+
+/* BEM backgrounds */
+
+.project__base--home {
+  margin-top: 10vh;
+  padding: 1rem 0rem 2rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  height: 20rem;
+  gap: 1rem;
+}
+
+/* BEM headlines */
+.project__name--home {
+  margin-top: 3rem;
+}
+/* BEM images */
+
+/* BEM plain text */
+
+/* BEM links */
+
 .project__link {
   padding: 1.5rem 1rem;
 }
@@ -75,8 +119,9 @@ a {
   transform: scale(1.5);
   transition: transform 500ms;
 }
-.my_projects {
-  color: white;
+
+.project__link--text {
+  color: #ffc800;
   background-color: #1ea896;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -100,17 +145,21 @@ footer {
   }
 }
 @media (min-width: 650px) {
-  main {
+  nav,
+  footer {
+    padding-right: 2rem;
+  }
+  .project__base--home {
     width: 60%;
   }
 }
 @media (min-width: 1000px) {
-  main {
+  .project__base--home {
     width: 40%;
   }
 }
 @media (min-width: 1700px) {
-  main {
+  .project__base--home {
     width: 25%;
   }
 }
