@@ -18,39 +18,68 @@ header {
   width: 100%;
   height: 10vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 /* Navigation */
-
-nav {
+.navigation {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  align-items: center;
-  gap: 0.7rem;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+}
+.nav__button {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  color: #1ea896;
+  background-color: transparent;
+  cursor: pointer;
+}
+.fa-bars,
+.fa-xmark {
+  font-size: 2.5rem;
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 9.5rem;
+  padding: 1rem;
+  background-color: #ffc800;
+}
+
+.nav__closed {
+  display: none;
 }
 
 .nav__link {
-  padding: 0.7rem;
+  width: 100%;
+  padding: 0.5rem;
   color: #1ea896;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .nav__link:hover {
   transform: scale(1.2);
   transition: transform 500ms;
 }
 
-/* .nav__link--text {
-  color: #1ea896;
-} */
-
 /* Main content - basics  */
 main {
+  width: 100%;
   height: 85vh;
   display: flex;
   justify-content: center;
 }
 div {
-  width: 100%;
   text-align: center;
 }
 
@@ -77,6 +106,7 @@ a {
 /* Styles for contact links */
 
 .contact {
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -87,7 +117,7 @@ a {
   transform: scale(1.3);
   transition: transform 500ms;
 }
-.fa-regular,
+.fa-envelope,
 .fa-brands {
   color: black;
   font-size: 2rem;
@@ -97,6 +127,7 @@ a {
 /* BEM backgrounds */
 
 .project__base--home {
+  width: 100%;
   background-color: white;
   border-radius: 2rem;
   margin-top: 1.5rem;
@@ -111,6 +142,7 @@ a {
 
 /* BEM headlines */
 .project__name--home {
+  width: 100%;
   margin-top: 3rem;
 }
 /* BEM images */
@@ -156,6 +188,21 @@ footer {
   footer {
     padding-right: 2rem;
   }
+
+  .navigation {
+    position: relative;
+  }
+  .nav__button {
+    display: none;
+  }
+
+  .nav__menu {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+  }
+
   .project__base--home {
     width: 60%;
   }

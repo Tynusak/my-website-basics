@@ -9,15 +9,22 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
     <title>Kristýna Švandová - osobní web</title>
   </head>
   <body>
     <header>
-      <nav>
-        <a class="nav__link" href="index.html">HOME</a>
-        <a class="nav__link" href="progress.html">CV</a>
-        <a class="nav__link" href="progress.html">PORTFOLIO</a>
-      </nav>
+      <div class="dark__mode"></div>
+      <div class="navigation">
+        <button class="nav__button" id="nav__button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav__closed nav__menu">
+          <a class="nav__link" href="index.html">home</a>
+          <a class="nav__link" href="progress.html">cv</a>
+          <a class="nav__link" href="progress.html">portfolio</a>
+        </nav>
+      </div>
     </header>
     <main>
       <div class="project__base--home">
