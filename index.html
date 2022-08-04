@@ -9,12 +9,18 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="theme_switcher.css" />
     <script src="index.js" defer></script>
     <title>Kristýna Švandová - osobní web</title>
   </head>
   <body>
     <header>
-      <div class="dark__mode"></div>
+      <div class="dark__mode">
+        <label class="theme__switcher" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
       <div class="navigation">
         <button class="nav__button" id="nav__button">
           <i class="fa-solid fa-bars"></i>

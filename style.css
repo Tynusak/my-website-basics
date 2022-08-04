@@ -2,17 +2,17 @@
 
 :root {
   --background-primary: #ffc800;
-  --background-secondary: white;
-  --text-plain: black;
+  --background-secondary: #ffffff;
+  --text-plain: #000000;
   --text-highlights: #1ea896;
 }
 
-/* :root[data-theme='dark'] {
+:root[data-theme='dark'] {
   --background-primary: #058274;
   --background-secondary: black;
   --text-plain: white;
   --text-highlights: #ffc800;
-} */
+}
 
 /* Basic styles */
 
