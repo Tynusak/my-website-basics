@@ -1,8 +1,6 @@
 //Dark mode switcher
 
-const toggleSwitch = document.querySelector(
-  '.theme__switcher input[type="checkbox"]',
-);
+const toggleSwitch = document.querySelector('#checkbox');
 const currentTheme = localStorage.getItem('theme')
   ? localStorage.getItem('theme')
   : null;

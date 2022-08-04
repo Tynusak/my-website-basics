@@ -8,7 +8,7 @@
 }
 
 :root[data-theme='dark'] {
-  --background-primary: #058274;
+  --background-primary: #177e71;
   --background-secondary: black;
   --text-plain: white;
   --text-highlights: #ffc800;
